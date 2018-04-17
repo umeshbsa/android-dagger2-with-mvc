@@ -55,9 +55,7 @@ public class NetModule {
     public NetModule(String url) {
         this.url = url;
     }
-...................................................
+    add complete code here ...................................................
 ```
-
-```
-
+Run this project and enjoy with dagger2 with mvc pattern...
           
