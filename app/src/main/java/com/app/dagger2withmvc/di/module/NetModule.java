@@ -15,13 +15,21 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/*
+ * NetModule :
+ * */
 @Module
 public class NetModule {
     private final String url;
+
     public NetModule(String url) {
         this.url = url;
     }
-    // Fetch Application object from AppModule
+
+    /*
+     * @param application
+     *        Fetch Application object from AppModule
+     * */
     @Provides
     @Singleton
     Cache provideOkHttpCache(Application application) {
@@ -29,8 +37,10 @@ public class NetModule {
         return new Cache(application.getCacheDir(), cacheSize);
     }
 
-
-    // Fetch Cache object from 'Cache provideOkHttpCache' method
+    /*
+     * @param cache
+     *        Fetch Cache object from 'Cache provideOkHttpCache' method
+     * */
     @Provides
     @Singleton
     OkHttpClient provideOkHttpClient(Cache cache) {
@@ -39,8 +49,13 @@ public class NetModule {
         return okHttpClient;
     }
 
-
-    // Fetch Gson object from GsonModule and OkHttpClient object from 'OkHttpClient provideOkHttpClient' method
+    /*
+     * @param gson
+     *        Fetch Gson object from 'GsonModule' method
+     *
+     * @param okHttpClient
+     *        Fetch OkHttpClient object from 'OkHttpClient provideOkHttpClient' method
+     * */
     @Provides
     @Singleton
     Retrofit provideRetrofit(Gson gson, OkHttpClient okHttpClient) {
@@ -51,8 +66,11 @@ public class NetModule {
                 .build();
     }
 
-
-    // This is IApiService interface to used inject in activity class
+    /*
+     * @param retrofit
+     *        Fetch retrofit class from gradle dependency
+     *        This is IApiService interface to used inject in activity class
+     * */
     @Provides
     @Singleton
     IApiService provideIApiService(Retrofit retrofit) {

@@ -13,6 +13,9 @@ import com.bumptech.glide.Glide;
 
 import javax.inject.Inject;
 
+/*
+ * FlowerDetailActivity : Used to show flower detail
+ * */
 public class FlowerDetailActivity extends BaseActivity {
 
     // Inject to get instance of IApiService from NetModule
@@ -26,7 +29,12 @@ public class FlowerDetailActivity extends BaseActivity {
     private TextView tvDesc;
     private TextView tvPrice;
 
-    // Set to this activity with AppComponent
+    /*
+     * @param appComponent
+     *        This is used inject this activity with dagger2
+     *
+     * Set to this activity with AppComponent
+     * */
     @Override
     public void injectAppComponent(AppComponent appComponent) {
         appComponent.plus(this);

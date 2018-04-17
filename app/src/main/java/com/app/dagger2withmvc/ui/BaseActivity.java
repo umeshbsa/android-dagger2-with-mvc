@@ -8,12 +8,17 @@ import com.app.dagger2withmvc.App;
 import com.app.dagger2withmvc.di.component.AppComponent;
 
 
+/*
+ * BaseActivity : used all child activity
+ * abstraction - to used inject child class from here
+ * */
 public abstract class BaseActivity extends AppCompatActivity {
 
     abstract public void injectAppComponent(AppComponent appComponent);
 
-
-    // Inject to All Activity
+    /*
+     *  Inject to All Activity
+     * */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

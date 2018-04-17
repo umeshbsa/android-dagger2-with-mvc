@@ -19,14 +19,21 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/*
+ * FlowerActivity : Used to show all flower list with adapter
+ * */
 public class FlowerActivity extends BaseActivity {
 
-    // Inject to get instance of IApiService from NetModule
+    /*
+     * Inject to get instance of IApiService from NetModule
+     * */
     @Inject
     IApiService request;
     private RecyclerView recycleViewFlower;
 
-    // Set to this activity with AppComponent
+    /*
+     * Set to this activity with AppComponent
+     * */
     @Override
     public void injectAppComponent(AppComponent appComponent) {
         appComponent.plus(this);
@@ -42,6 +49,7 @@ public class FlowerActivity extends BaseActivity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         recycleViewFlower.setLayoutManager(mLayoutManager);
 
+        // call flower api list
         Call<List<Flower>> call = request.getFlowersAPI();
         call.enqueue(new Callback<List<Flower>>() {
             @Override

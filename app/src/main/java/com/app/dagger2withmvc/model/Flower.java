@@ -2,7 +2,10 @@ package com.app.dagger2withmvc.model;
 
 import java.io.Serializable;
 
-public class Flower implements Serializable{
+/*
+ * Flower model to show on adapter and flower details
+ */
+public class Flower implements Serializable {
 
     private String category;
     private double price;

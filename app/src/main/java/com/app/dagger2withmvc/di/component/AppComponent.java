@@ -13,14 +13,29 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 
-// AppComponent : Insert all module here like - AppModule, GsonModule, NetModule
+/*
+ AppComponent : Insert all module here like - AppModule, GsonModule, NetModule
+*/
+
 @Singleton
 @Component(modules = {AppModule.class, GsonModule.class, NetModule.class})
 public interface AppComponent {
 
+    /*
+     * @param app
+     *        Inject all module
+     * */
     void inject(App app);
 
+    /*
+     * @param flowerActivity
+     *        Inject from FlowerActivity
+     * */
     void plus(FlowerActivity flowerActivity);
 
+    /*
+     * @param flowerDetailactivity
+     *        Inject from FlowerDetailActivity
+     * */
     void plus(FlowerDetailActivity flowerDetailActivity);
 }

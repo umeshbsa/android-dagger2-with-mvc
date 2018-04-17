@@ -12,10 +12,16 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
-
-// GsomModule : This is module is used in NetModule
+/*
+ * GsonModule : This is module is used in NetModule
+ */
 @Module
 public class GsonModule {
+
+
+    /*
+     * Provide Gson object into NetModule
+     * */
     @Provides
     @Singleton
     Gson provideGson() {

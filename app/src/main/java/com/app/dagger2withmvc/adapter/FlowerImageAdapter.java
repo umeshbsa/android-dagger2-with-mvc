@@ -18,6 +18,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+/*
+ * FlowerImageAdapter : Show all flower in list
+ * */
 public class FlowerImageAdapter extends RecyclerView.Adapter<FlowerImageAdapter.FlowerHolder> {
 
     private final LayoutInflater inflater;
