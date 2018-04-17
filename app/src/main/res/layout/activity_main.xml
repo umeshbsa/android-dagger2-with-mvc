@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Show all flower. This is a dagger2 example with mvc pattern"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view_flower"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
