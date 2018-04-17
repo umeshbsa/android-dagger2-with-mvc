@@ -6,7 +6,10 @@ This is example of android dagger2 with brief code by using mvc design pattern.
 </p>
 
 1. Add code in application class project
+
+```java
  appComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
                 .netModule(new NetModule("https://api.github.com/"))
                 .build();
+                ```
