@@ -1,4 +1,4 @@
-# android-dagger2-with-mvc
+# Android Dagger2 with MVC design pattern
 This is example of android dagger2 with brief code by using mvc design pattern.
 
 <p align="left">
