@@ -16,7 +16,6 @@ import dagger.Provides;
 // GsomModule : This is module is used in NetModule
 @Module
 public class GsonModule {
-
     @Provides
     @Singleton
     Gson provideGson() {

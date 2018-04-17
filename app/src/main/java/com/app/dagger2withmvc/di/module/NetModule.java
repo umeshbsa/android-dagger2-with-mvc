@@ -17,14 +17,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class NetModule {
-
     private final String url;
-
     public NetModule(String url) {
         this.url = url;
     }
-
-
     // Fetch Application object from AppModule
     @Provides
     @Singleton
